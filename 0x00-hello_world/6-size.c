@@ -6,7 +6,7 @@
  *
  * prints the sizes of each data type
  *
- * Always returns - (0)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
