@@ -12,6 +12,10 @@ int main(void)
 
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
+		if (alpha == 101 || alpha == 113)
+		{
+			continue;
+		}
 		putchar(alpha);
 	}
 	putchar('\n');
