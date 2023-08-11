@@ -9,11 +9,11 @@
  */
 int main(void)
 {
-	char number;
+	int number;
 
 	for (number = 48; number <= 57; number++)
 	{
-		putchar(number);
+		putchar((char)number);
 		if (number != 57)
 		{
 			putchar(',');
