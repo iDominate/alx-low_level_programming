@@ -10,7 +10,7 @@ int main(void)
 	int i, j, k, i1, j1;
 
 	k = 48;
-	i1 = 48;
+	i1 = 49;
 	j1 = 49;
 
 	while (k <= 55)
