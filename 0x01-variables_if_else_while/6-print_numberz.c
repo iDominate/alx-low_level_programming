@@ -2,7 +2,6 @@
 
 
 /**
- *
  * main - Entry point
  *
  * returns: Always 0(Success)
