@@ -5,9 +5,10 @@
 /**
  * main - Entry point
  *
- * returs: Always 0(Success)
- *
+ * Return: Always 1 (Error)
  */
+
+
 int main(void)
 {
 	char i;
