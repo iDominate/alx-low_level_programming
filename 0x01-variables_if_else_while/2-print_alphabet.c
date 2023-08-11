@@ -3,10 +3,10 @@
 
 
 /**
- *
  * main - Entry point
  *
  * returs: Always 0(Success)
+ *
  */
 int main(void)
 {
