@@ -21,11 +21,9 @@ int main(void)
 			putchar(j);
 
 			if (i == 56 && j == 57)
-					continue;
-				putchar(',');
-				putchar(' ');
-			
-
+			continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
