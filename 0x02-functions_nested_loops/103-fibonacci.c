@@ -25,4 +25,5 @@ int main(void)
 		number_counter++;
 	}
 	printf("\n");
+	return (0);
 }
