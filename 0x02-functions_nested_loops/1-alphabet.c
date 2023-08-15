@@ -2,9 +2,9 @@
 #include "_putchar.h"
 
 /**
- * print_alphabel - print alphabet
+ * print_alphabel - prints alphabet
  *
- * Return: Always void
+ * Return: Always 0(Success)
  */
 void print_alphabet(void)
 {
