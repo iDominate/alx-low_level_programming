@@ -3,7 +3,7 @@
 /**
  * _islower - checks whether the given ascii is lower
  *
- * ch: the given ascii number
+ * @ch:  the given ascii number
  *
  * Return: lower 1(True) | upper 0(False)
  */
