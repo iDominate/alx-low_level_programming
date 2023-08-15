@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "_putchar.h"
 
+
 /**
- * print_alphabel - prints alphabet
+ * print_alphabet - prints alphabet
  *
  * Return: Always 0(Success)
  */
