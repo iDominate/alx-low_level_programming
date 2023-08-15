@@ -14,8 +14,9 @@ int print_last_digit(int c)
 
 	if (c == INT_MIN)
 	{
-		_putchar(48 + 8);
-		return (48 + 8);
+		result = 48 + 8;
+		_putchar(result);
+		return (8);
 	}
 	last = abs(c) % 10;
 	result = 48 + last;
