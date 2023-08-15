@@ -16,7 +16,7 @@ int main(void)
 
 	for (i = 0; i < strlen(string); i++)
 	{
-		put_char((char) string[i]);
+		_putchar((char) string[i]);
 	}
 	return (0);
 }
