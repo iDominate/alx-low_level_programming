@@ -7,3 +7,4 @@
 #include "6-abs.h"
 #include "7-print_last_digit.h"
 #include "8-24_hours.h"
+#include "9-times_table.h"

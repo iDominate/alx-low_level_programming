@@ -2,31 +2,27 @@
 #include <stdlib.h>
 #include <limits.h>
 
+void print(long);
+
+
 int main(void)
 {
-	int hour1, hour2, minute1, minute2;
-	for (hour1 = 48; hour1 < 51; hour1++)
-	{
-		
-		for (hour2 = 48; hour2 <= 57; hour2++)
-		{
-			if( hour1 == 50 && hour2 == 52)
-				break;
-			for (minute1 = 48; minute1 < 54; minute1++)
-			{
-				for (minute2 = 48; minute2 <= 57; minute2++)
-				{
-					putchar(hour1);
-					putchar(hour2);
-					putchar(':');
-					putchar(minute1);
-					putchar(minute2);
-					putchar('\n');
-					
-				}
+	print(12345);
+}
 
-			}
-		}
-	}
+void print(long n)
+{
+    // If number is smaller than 0, put a - sign
+    // and change number to positive
+    if (n < 0) {
+        putchar('-');
+        n = -n;
+    }
 
+    // Remove the last digit and recur
+    if (n/10)
+        print(n/10);
+
+    // Print the last digit
+    putchar(n%10 + '0');
 }
