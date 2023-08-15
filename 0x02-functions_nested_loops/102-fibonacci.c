@@ -13,7 +13,7 @@ int main(void)
 
 	previous_number = number_counter =  0;
 	iter = 1;
-	while (number_counter <= 50)
+	while (number_counter < 51)
 	{
 		med = iter;
 		iter = previous_number + iter;
