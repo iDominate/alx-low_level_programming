@@ -4,3 +4,4 @@
 #include "3-islower.h"
 #include "4-isalpha.h"
 #include "5-sign.h"
+#include "6-abs.h"
