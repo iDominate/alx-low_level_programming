@@ -19,8 +19,10 @@ int main(void)
 		iter = previous_number + iter;
 		previous_number = med;
 
-		printf("%ld, ", iter);
+		printf("%ld", iter);
+		if (number_counter != 50)
+			printf(", ");
 		number_counter++;
 	}
-	putchar('\n');
+	printf("\n");
 }
