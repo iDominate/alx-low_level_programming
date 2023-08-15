@@ -4,7 +4,7 @@
 
 /**
  * print_times_table - prints all multiplication tables
- * 
+ *
  * @num: int
  *
  * Return: Always void
@@ -39,7 +39,7 @@ void print_times_table(int num)
 				}
 			}
 			print(result);
-			if ( j != num)
+			if (j != num)
 			_putchar(',');
 			if (i == 0 && j != num)
 			{
@@ -49,8 +49,6 @@ void print_times_table(int num)
 			}
 			if (j == num)
 				_putchar('\n');
-
-
 		}
 	}
 }
