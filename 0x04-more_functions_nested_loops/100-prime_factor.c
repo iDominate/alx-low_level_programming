@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i;
-	long long int k;
+	long int k;
 
 	i = 2;
 	k = 612852475143;
