@@ -20,7 +20,9 @@ int _atoi(char *s)
 	if (atoi(s) != 0 && s[0] != '0')
 		return (atoi(s));
 	else if (s[0] == '0')
+	{
 		return (0);
+	}
 
 		for (i = 0; i < strlen(s); i++)
 		{
