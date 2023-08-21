@@ -14,7 +14,11 @@ void _puts(char *str)
 
 	str_len = strlen(str);
 	if (str_len == 0)
+	{
+		_putchar('\n');
 		return;
+	}
+
 	for (i = 0; i < str_len; i++)
 	{
 		_putchar((int) str[i]);
