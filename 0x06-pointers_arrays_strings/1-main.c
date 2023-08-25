@@ -22,5 +22,6 @@ int main(void)
     printf("%s", s1);
     printf("%s", s2);
     printf("%s", ptr);
-    return (0);
 
+    return (0);
+}
