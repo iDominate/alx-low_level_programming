@@ -1,36 +1,32 @@
 #include <stddef.h>
 
+/**
+ * _strstr - similar
+ *
+ * @haystack: hay
+ * @needle: needle
+ * Return: char *
+ */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j;
-	char *result;
+	unsigned int i = 0, j = 0;
 
-	int flag = 0;
-	i = j = 0;
-	result = NULL;
-	for (i = 0; i < sizeof(haystack); i++)
+	while (haystack[i])
 	{
-		if (haystack[i] == needle[0])
+		while (needle[j] && (haystack[i] == needle[0]))
 		{
-			result = &haystack[i];
-		for (j = 0; j < sizeof(needle); j++)
-		{
-			if(haystack[i] == needle[j])
-			{
-				flag = 1;
-				continue;
-			} else{
-				flag = 0;
+			if (haystack[i + j] == needle[j])
+				j++;
+			else
 				break;
-			}
-				
 		}
-		if(flag)
+		if (needle[j])
 		{
-			return result;
+			i++;
+			j = 0;
 		}
-		}
-
+		else
+			return (haystack + i);
 	}
-	return result;
+	return (0);
 }
