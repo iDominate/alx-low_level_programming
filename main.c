@@ -2,20 +2,16 @@
 
 int main(void)
 {
-	char buffer[98]= {0x00};
+	int i, j;
+	i = j = 0;
+	char buffer[3][2]= {{1,2}, {2,4}, {5, 6}};
 
-	char first_buffer = 0x01;
-	char last_buffer = buffer[0];
-	int i = 0;
-	while (i < 95)
+	for (i = 0; i < 3; i++)
 	{
-		*(buffer + i) = first_buffer;
-		i++;
+		for (j = 0; j < 1; j++)
+		{
+			printf("%c", *(buffer + i + j));
+		}
+
 	}
-	*(buffer + i) = last_buffer;
-	
-	for (i = 0; i < sizeof(buffer); i++)
-	{
-		printf("0x%02x ", *(buffer+i));
-	}	
 }
