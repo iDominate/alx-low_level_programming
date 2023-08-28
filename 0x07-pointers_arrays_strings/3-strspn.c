@@ -1,6 +1,5 @@
 #include <ctype.h>
 
-
 /**
  * _strspn - similar to strspn
  *
@@ -14,21 +13,17 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int counter, i, j;
 
 	counter = 0;
-	i = j = 0;
-	while (i < sizeof(s))
+	for (i = 0; s[i]; i++)
 	{
 		if (isalpha(s[i]))
 		{
-			while (j < sizeof(accept))
+			for (j = 0; accept[j]; j++)
 			{
 				if (s[i] == accept[j])
 					counter++;
-				j++;
 			}
-			j = 0;
 		} else
 			break;
-		i++;
 	}
-	return (counter ? counter : 0);
+	return (counter);
 }
