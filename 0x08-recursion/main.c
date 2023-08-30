@@ -1,14 +1,23 @@
-#include "main.h"
 #include <stdio.h>
 #include <string.h>
-int _strlen_recursion(char *c)
+int power_by(int, int);
+
+int _strlen_recursion(int n)
 {
-	if (!(*c))
-		return 0;	
-	return 1 + _strlen_recursion(c + 1);
+		return power_by(n, 2);
+}
+
+int power_by(int x, int y)
+{
+	if(x % 2 != 0)
+		return -1;
+	if(y * y == x)
+		return y;
+	else
+		return power_by(x, y * 2);
 }
 
 int main(void)
 {
-	printf("%d",_strlen_recursion("Hello World"));
+	printf("%d",_strlen_recursion(1024));
 }
