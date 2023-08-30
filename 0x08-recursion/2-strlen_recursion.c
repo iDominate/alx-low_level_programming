@@ -1,7 +1,7 @@
 
 
 /**
- * _str_recursion - display string length
+ * _strlen_recursion - display string length
  *
  * @c: string
  *
@@ -10,8 +10,8 @@
 int _strlen_recursion(char *c)
 {
 	if (!(*c))
-		return 0;
-	return 1 + _strlen_recursion(c + 1);
+		return (0);
+	return (1 + _strlen_recursion(c + 1));
 }
 
 
