@@ -21,6 +21,8 @@ int _sqrt_recursion(int n)
  */
 int power_by(int x, int y)
 {
+	if (x == 1)
+		return (1);
 	if (x == y || x < 0)
 		return (-1);
 	if (y * y == x)
