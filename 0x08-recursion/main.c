@@ -1,17 +1,17 @@
 #include "main.h"
 #include <stdio.h>
-void _put_recursion(char *s)
+void _puts_recursion(char *s)
 {       
         if(!(*s)){        
                 putchar('\n');
 	}
         else{
                 putchar(*s++);
-		return _put_recursion(s);
+		return _puts_recursion(s);
 	}
 }
 
 int main(void)
 {
-	_put_recursion("Hello World");
+	_puts_recursion("Hello World");
 }
