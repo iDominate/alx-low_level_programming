@@ -1,14 +1,12 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 void _puts_recursion(char *s)
-{       
-        if(!(*s)){        
-                putchar('\n');
-	}
-        else{
-                putchar(*s++);
-		return _puts_recursion(s);
-	}
+{
+	s = s + strlen(s) - 1;
+	putchar();
+	
+
 }
 
 int main(void)
