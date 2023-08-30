@@ -1,15 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
-void _puts_recursion(char *s)
+int _strlen_recursion(char *c)
 {
-	s = s + strlen(s) - 1;
-	putchar();
-	
-
+	if (!(*c))
+		return 0;	
+	return 1 + _strlen_recursion(c + 1);
 }
 
 int main(void)
 {
-	_puts_recursion("Hello World");
+	printf("%d",_strlen_recursion("Hello World"));
 }
