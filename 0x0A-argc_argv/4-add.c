@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+int _atoi(char *s);
+int pow_10(int n);
 /**
  * main - entry point
  *
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 	}
 	result = _atoi(argv[1]) + _atoi(argv[2]);
 
-	printf("%d", result);
+	printf("%d\n", result);
 	return (0);
 }
 
@@ -33,17 +34,15 @@ int main(int argc, char *argv[])
  */
 int _atoi(char *s)
 {
-	int a, len, i, j, begin, sign, result = 0;
+	int a, len, j, begin, sign, result = 0;
 
 	len = a = 0;
-	i = 0;
 	begin = j = 1;
 	sign = 1;
 	result = 0;
 	if (*s == '-')
 	{
 		sign *= -1;
-		i = 1;
 		s++;
 	}
 	for (a = 0; s[a]; a++)
