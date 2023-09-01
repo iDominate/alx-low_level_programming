@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * _putchar - puts a char to the stout
@@ -9,6 +9,6 @@
  */
 int _putchar(char ch)
 {
-	putchar(ch);
+	write(1, &ch, sizeof(ch));
 	return (0);
 }
