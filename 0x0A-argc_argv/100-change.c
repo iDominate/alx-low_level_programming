@@ -6,6 +6,8 @@
  *
  * @argc: number of arguments
  * @argv: vector of args
+ *
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
