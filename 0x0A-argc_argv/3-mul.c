@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	result = 0;
 	if (argc != 3)
 	{
-		puts("Error\n");
+		puts("Error");
 		return (1);
 	}
 	result = _atoi(argv[1]) * _atoi(argv[2]);
