@@ -1,9 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * main - entry point
+ *
+ * @argc: number of args
+ * @argv: vector
+ * Return: 0
+ */
 int main(int argc, char *argv[])
 {
 	int result;
-	if(argc != 3)
+
+	if (argc != 3)
 	{
 		puts("Error\n");
 		return (1);
