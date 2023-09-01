@@ -1,24 +1,27 @@
 #include <stdio.h>
 #include <string.h>
-int is_prime(int, int);
-int is_prime_number(int);
+#include "main.h"
 
-int is_prime_number(int n)
+int is_palindrome(char *s)
 {
-	return is_prime(n, 2);
+	return is_pali(s, s[0]);
 }
 
-int is_prime(int x, int y)
+int is_pali(char *c, char ch)
 {
-	if(y == 10)
+	if(!ch)
 		return (1);
-	if (x % y == 0 && (x != y))
+	if(*c == ch && *(c + 1) == '\0')
+		return (1);
+	else if (*c != ch && *(c + 1) == '\0')
 		return (0);
-	else 
-		return is_prime(x, y + 1);
+	else
+		return is_pali(c + 1, ch);
+	
 }
 
 int main(void)
 {
-	printf("%d",is_prime_number(25));
+	char *c = "";
+	printf("%d",is_palindrome(c));
 }
