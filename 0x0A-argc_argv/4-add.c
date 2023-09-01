@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 int _atoi(char *s);
 int pow_10(int n);
 /**
@@ -11,16 +12,18 @@ int pow_10(int n);
  */
 int main(int argc, char *argv[])
 {
-	int result;
+	int result, i;
 
 	result = 0;
-	if (argc != 3)
+	for (i = 1; i < argc; i++)
 	{
-		puts("Error\n");
-		return (1);
+		if (argv[i][0] < 48 || argv[i][0] > 57)
+		{
+			puts("Error");
+			return (1);
+		}
+		result += _atoi(argv[i]);
 	}
-	result = _atoi(argv[1]) + _atoi(argv[2]);
-
 	printf("%d\n", result);
 	return (0);
 }
@@ -74,4 +77,3 @@ int pow_10(int n)
 	}
 	return (result);
 }
-
