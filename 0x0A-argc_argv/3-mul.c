@@ -22,10 +22,10 @@ int main(int argc, char *argv[])
 }
 
 /**
- * _atoi - converts a string to an integer
- * @s: string to be converted
+ * _atoi - converts  string to an integer
+ * @s: string
  *
- * Return: the int converted from the string
+ * Return: int
  */
 int _atoi(char *s)
 {
