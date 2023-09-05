@@ -1,44 +1,50 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
+#include "main.h"
 int _strlen(char *s);
-char *_strdup(char *s);
-int main(void)
+char *argstostr(int, char **);
+int main(int argc, char **argv)
 {
-	char *s1 = _strdup("Hello World");
-	if(s1 == NULL)
-	{
-		puts("Error");
-	}
-	printf("%s\n", s1);
+	char *s	= argstostr(argc, argv);
+	puts(s);
 
 }
 
-char *_strdup(char *s)
+char *argstostr(int ac, char **av)
 {
-        int str_len, i; 
-        char *str_p;
-        
+	int i, total_size, counter, j;
 
-	str_len = 1;
+	char *result_str;
+	total_size = counter = 0;
+	for (i = 1; i < ac; i++)
+	{
+		total_size += _strlen(av[i]);
+	}
 
-        for(i = 0; s[i]; i++)
+	result_str = (char *) malloc((sizeof(char) * total_size) + ac + 1);
+	if (!result_str)
+		return (NULL);
+	for (i = 1, j = 0; i < ac && av[i][j]; i++, j++, counter++)
 	{
-		str_len++;
+		for (j = 0; j < _strlen(av[i]); j++, counter++)
+                {
+                        *(result_str + counter) = av[i][j];
+                }
+                result_str[counter] = '\n';
+
+		
 	}
-	printf("%d\n", str_len);
-        str_p = (char *) malloc(sizeof(char) * str_len);
-        if (!str_p)
-        {
-              return (NULL);
-        }
-	 
-        for (i = 0; i < str_len; i++)
-	{
-		*(str_p + i) = s[i];
-	}
-        return (str_p);
+	return (result_str);
+
 }
 
+int _strlen(char *s)
+{
+	int result;
 
+	result = 0;
+	while (*s++)
+		result++;
+	return result;
+}
