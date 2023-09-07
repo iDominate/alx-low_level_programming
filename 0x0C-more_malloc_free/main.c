@@ -4,7 +4,7 @@
 
 int main(void)
 {
-	char *s = string_nconcat("Best ", "School !!!", 6);
+	char *s = string_nconcat(NULL, "School !!!", 6);
 	printf("%s\n", s);
 
 }
