@@ -21,6 +21,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	new_str = (char *) malloc(s1_len + n + 1);
 	if (!new_str)
 		return (NULL);
+	if (!n)
+		return (NULL);
 	for (i = 0; s1[i]; i++)
 	{
 		new_str[counter] = s1[i];
