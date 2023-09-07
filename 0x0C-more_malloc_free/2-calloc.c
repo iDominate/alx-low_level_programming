@@ -10,20 +10,25 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr;
-	char *char_ptr;
-	int arr_size, i;
+		int range, i;
+	int *p;
 
-	arr_size = nmemb * size;
-	char_ptr = (char *) malloc(arr_size);
-	if (size == 0 || nmemb == 0)
+	range = 0;
+
+	if (min > max)
 		return (NULL);
-	if (!char_ptr)
+
+	range = ((max + 1) - min);
+
+	p = malloc(range * sizeof(int));
+
+	if (p == NULL)
 		return (NULL);
-	for (i = 0; i < arr_size; i++)
+
+	for (i = 0; i < range; i++)
 	{
-		*(char_ptr + i) = 0;
+		*(p + i) = min + i;
 	}
-	ptr = (void *) char_ptr;
-	return (ptr);
+
+	return (p);
 }

@@ -10,22 +10,25 @@
  */
 int *array_range(int min, int max)
 {
-	int size, *arr, i;
+		int range, i;
+	int *p;
+
+	range = 0;
 
 	if (min > max)
 		return (NULL);
-	size = ((max + 1) - min);
-	/*printf("%d\n", size);*/
-	/*printf("%ld\n", (size * sizeof(int)));*/
-	arr = (int *) malloc(size * sizeof(int));
 
-	if (!arr)
+	range = ((max + 1) - min);
+
+	p = malloc(range * sizeof(int));
+
+	if (p == NULL)
 		return (NULL);
-	for (i = min; i <= max; i++)
+
+	for (i = 0; i < range; i++)
 	{
-		arr[i] = i;
-		/*printf("%d\n", arr[i]);*/
+		*(p + i) = min + i;
 	}
 
-	return (arr);
+	return (p);
 }
