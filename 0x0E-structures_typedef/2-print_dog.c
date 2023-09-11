@@ -17,17 +17,17 @@ void print_dog(struct dog *d)
 	owner = d->owner;
 	age = d->age;
 
-	if (!d)
+	if (d == NULL)
 		return;
-	if (name == 0)
+	if (name == NULL)
 		printf("Name: (nil)\n");
 	else
 		printf("Name: %s\n", name);
-	if (age == 0)
+	if (age == NULL)
 		printf("Age: (nil)\n");
 	else
 		printf("Age: %f\n", age);
-	if (owner == 0)
+	if (owner == NULL)
 		printf("Owner: (nil)\n");
 	else
 		printf("Owner: %s\n", owner);
