@@ -23,6 +23,8 @@ int int_index(int *array, int size, int (*cmp)(int))
 			result = i;
 			return (result);
 		}
+		if (cmp(array[i]) == -1)
+			return (result);
 	}
 	return (result);
 }
