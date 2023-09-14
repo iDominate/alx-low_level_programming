@@ -40,6 +40,7 @@ void print_all(const char * const format, ...)
 	int i;
 	va_list args;
 	void (*func_ptr)(va_list *);
+	char *sep;
 
 	char_func_ptr format_arr[] = {
 		{'c', print_char},
@@ -47,18 +48,17 @@ void print_all(const char * const format, ...)
 		{'s', print_string},
 		{'i', print_integer}
 	};
+	sep = "";
 	i = 0;
-	if (!format)
-		return;
 	va_start(args, format);
-	while (format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
 		func_ptr = get_func(format[i], format_arr);
 		if (func_ptr)
 		{
+			printf("%s" , sep);
 			func_ptr(&args);
-			if (format[i + 1] != '\0')
-				printf(", ");
+			sep = ", ";
 		}
 		i++;
 	}
@@ -86,7 +86,13 @@ void print_char(va_list *args)
  */
 void print_string(va_list *args)
 {
-	printf("%s", va_arg(*args, char *));
+	char *str[2];
+	int i;
+
+	str[0] = va_arg(*args, char *);
+	str[1] = "(nil)";
+	i = str[0] == NULL;
+	printf("%s", str[i]);
 }
 /**
  * print_float - print float
