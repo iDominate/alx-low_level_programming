@@ -56,7 +56,7 @@ void print_all(const char * const format, ...)
 		func_ptr = get_func(format[i], format_arr);
 		if (func_ptr)
 		{
-			printf("%s" , sep);
+			printf("%s", sep);
 			func_ptr(&args);
 			sep = ", ";
 		}
