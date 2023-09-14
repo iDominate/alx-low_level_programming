@@ -26,15 +26,14 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 			printf("(nil)%s", seperator);
 			continue;
 		}
-		else
+		else if (!str)
 		{
 			printf("(nil)");
 			continue;
-		}
-		if (seperator && i != (n - 1))
-			printf("%s%s", va_arg(ptr, char *), seperator);
+		} else if (seperator && i != (n - 1))
+			printf("%s%s", str, seperator);
 		else
-			printf("%s", va_arg(ptr, char *));
+			printf("%s", str);
 	}
 	va_end(ptr);
 	printf("\n");
